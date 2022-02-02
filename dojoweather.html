@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DojoWeather</title>
+    <link rel="stylesheet" href="dojoweather.css">
+</head>
+<body>
+    <header class="navbar"> <!-- NavBar start-->
+        <h1>DojoWeather</h1>
+        <div class="leftnav">
+        <a onclick="loc(this)" href="#">Burbank</a>
+        <a onclick="loc(this)" href=#'>Chicago</a>
+        <a onclick="loc(this)" href=#>Dallas</a>
+        </div>
+    </header> <!--NavBar end-->
+    <main class="main"> <!--Main start-->
+        <div class="nav2"><!-- NAV2 start-->
+        <h2>San Jose</h2>
+        <div class="temp"><!-- Temp selector start-->
+            <p>show temperature in</p>
+            <select onchange="tempConversion(this)" class="tempselect">
+                <option value="C">℃</option>
+                <option value="F">℉</option>
+            </select>
+        </div> <!--Tmep selector end-->
+        </div><!--NAV2 end-->
+        <div class="container"> <!--Holder of the four days start-->
+            <section class="today"> <!-- first day start-->
+                <h3>Today</h3>
+                <img src="assets\some_rain.png" alt="rain">
+                <p>some rain</p>
+                <div class="temps1">
+                    <p class="red"><span id="num1">24</span>°</p>
+                    <p class="blue"><span id="num2">18</span>°</p>
+                </div>
+            </section><!--first day end-->
+            <section class="tomorrow"> <!--2nd day start-->
+                <h4>Tomorrow</h4>
+                <img src="assets\some_sun.png" alt="sun">
+                <p>some sun</p>
+                <div class="temps2">
+                    <p class="red"><span id="num3">27</span>°</p>
+                    <p class="blue"><span id="num4">19</span>°</p>
+            </section> <!--2nd day end-->
+            <section class="friday"><!--3rd day start-->
+                <h5>Friday</h5>
+                <img src="assets\some_clouds.png" alt="clouds">
+                <p>some clouds</p>
+                <div class="temps3">
+                    <p class = "red"><span id="num5">21</span>°</p>
+                    <p class = "blue"><span id="num6">16</span>°</p>
+            </section><!--3rd day end-->
+            <section class="saturday"><!-- 4th day start-->
+                <h6>Saturday</h6>
+                <img src="assets\some_sun.png" alt="sun">
+                <p>some sun</p>
+                <div class="temps3">
+                    <p class="red"><span id="num7">26</span>°</p>
+                    <p class="blue"><span id="num8">21</span>°</p>
+            </section><!-- 4th day end-->
+        </div> <!-- enf od 4 days holder -->
+        <footer id="cookie" class="cookiebox"> <!-- bottom cookie box start-->
+            <img src="assets\cookie.png" alt="cookie">
+            <p><span>Stop! Cookie time</span><br>
+            We use Cookies (sadly not the edible ones) to personalize <br>
+            content and ads, to provide social media features and to <br>
+            anaylyse our traffic. <a href="#">Read more...</a></p>
+            <button onclick ="disappear()"type="submit">I Accept</button>
+        </footer><!--bottom cookie bar end-->
+    </main>
+    <script src="dojoweather.js"></script>
+</body>
+</html>
